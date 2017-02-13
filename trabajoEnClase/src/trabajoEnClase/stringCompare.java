@@ -1,5 +1,5 @@
 //https://www.hackerrank.com/challenges/java-string-compare
-
+//Utilizar el otro metodo, utilizando una lista de strings y luego utilizando el Array.sort el cual los desarrolla con compareTo.
 package trabajoEnClase;
 
 
