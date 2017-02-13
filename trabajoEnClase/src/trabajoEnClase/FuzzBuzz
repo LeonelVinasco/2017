@@ -1,0 +1,31 @@
+//https://www.hackerearth.com/challenge/college/estructuras-de-datos/algorithm/b1262a05b7f94cf58328061907b749b0/
+
+import java.util.*;
+
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+   Scanner scan;
+		scan = new Scanner(System.in);
+		String input;
+		String ancho;
+		input=new String(scan.nextLine());
+		int num;
+		num=Integer.parseInt(input);
+		
+		while(scan.hasNext()){
+		
+		if(num%3==0 && num%5==0){
+		    System.out.println("FuzzBuzz");
+		    
+		}else if(num%3==0 ){
+		    System.out.println("Fuzz");
+		}else if(num%5==0){
+		    System.out.println("Buzz");
+		    
+		}
+		
+		}
+		
+    }
+}
