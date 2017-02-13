@@ -2,7 +2,7 @@
 
 package trabajoEnClase;
 
-import java.io.File;
+
 import java.util.Scanner;
 
 public class stringCompare {
@@ -20,25 +20,43 @@ public class stringCompare {
 		temp=new String();
 		temp=input.substring(inicio,inicio+ancho_int );
 		String mayor;
-		mayor=new String("");
 		String menor;
-		menor=new String("");
-		int nuevo_Inicio=inicio+ancho_int;
+		String mayorTemp;
+		String menorTemp;
 		
-		for(int i=0;i<input.length()-ancho_int;i=i+ancho_int){
+		int compMenor=0;
+		int compMayor=0;
+		
+		temp=input.substring(inicio,inicio+ancho_int );
+		menor=new String(temp);
+		mayor=new String(temp);
+		for(int i=ancho_int;i<=input.length()-ancho_int;i=i+1){
+			
+			
 			int comp=temp.compareTo(input.substring(i, i+ancho_int));
-			int compMenor=temp.compareTo(menor);
-			int compMayor=temp.compareTo(mayor);
 			
-			if(comp<0 && compMenor<0 ){
-				menor=temp;
-			}else if(comp<0 && compMayor>0){
-				mayor=temp;
+			if(comp<=0){
+				menorTemp=temp;
+				mayorTemp=input.substring(i, i+ancho_int);
+			}else{
+				menorTemp=input.substring(i, i+ancho_int);
+				mayorTemp=temp;
 			}
+			compMenor=menorTemp.compareTo(menor);
+			compMayor=mayorTemp.compareTo(mayor);
 			
+			if(compMenor<0){
+				menor=menorTemp;
+				
+			}
+			if(compMayor>0){
+				mayor=mayorTemp;
+			}
+			temp=input.substring(i, i+ancho_int);
 		}		
-		
+		System.out.println(menor);
 		System.out.println(mayor);
+		
 		
 		
 		
