@@ -3,6 +3,9 @@
 import java.util.*;
 
 
+import java.util.*;
+
+
 class TestClass {
     public static void main(String args[] ) throws Exception {
    Scanner scan;
@@ -11,10 +14,10 @@ class TestClass {
 		String ancho;
 		input=new String(scan.nextLine());
 		int num;
-		num=Integer.parseInt(input);
+		
 		
 		while(scan.hasNext()){
-		
+		num=Integer.parseInt(scan.nextLine());
 		if(num%3==0 && num%5==0){
 		    System.out.println("FuzzBuzz");
 		    
@@ -23,6 +26,8 @@ class TestClass {
 		}else if(num%5==0){
 		    System.out.println("Buzz");
 		    
+		}else{
+		    System.out.println(num);
 		}
 		
 		}
